@@ -1,2 +1,2 @@
 # dev-memory
-Place to hold collective arbitrary development-related snippets that don't have other homes
+A place to store collective arbitrary development-related snippets that don't have other homes.
