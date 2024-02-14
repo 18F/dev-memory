@@ -1,3 +1,20 @@
+## Node.js
+
+### Check if a file exists
+
+Node.js took away the single-function method for checking if a file
+exists, but it's not too hard to make your own with promises.
+
+```javascript
+const fs = require("node:fs/promises");
+
+const fsExists = async (filePath) =>
+  fs
+    .access(filePath, fs.constants.F_OK)
+    .then(() => true)
+    .catch(() => false);
+```
+
 ## Git subcommands
 
 ### Delete all branches that have been merged into the main branch
