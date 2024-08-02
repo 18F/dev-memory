@@ -32,7 +32,7 @@ But you can also configure git to automatically create remote tracking
 branches so you don't need the `-u` at all!
 
 ```shell
-git config --global --add bool push.autoSetupRemote true
+git config --global --add --bool push.autoSetupRemote true
 ```
 
 And thereafter, when you `git push`, if there's not already a remote tracking
