@@ -17,6 +17,32 @@ const fsExists = async (filePath) =>
 
 ## Git subcommands
 
+### Configure git to create remote tracking branches automatically
+
+When you create a local branch and it's time to push it to the remote, you
+typically have to explicitly tell git to create a remote branch and configure
+it your local one as tracking. It's not a huge ordeal and you can do it in
+a single command:
+
+```shell
+git push -u origin <branch name>
+```
+
+But you can also configure git to automatically create remote tracking
+branches so you don't need the `-u` at all!
+
+```shell
+git config --global --add bool push.autoSetupRemote true
+```
+
+And thereafter, when you `git push`, if there's not already a remote tracking
+branch on the default origin, git will create one for you.
+
+> [!NOTE]
+> If you're pushing to a non-default origin, you'll still have to manually
+> create the tracking branch.
+
+
 ### Delete all branches that have been merged into the main branch
 
 ```shell
